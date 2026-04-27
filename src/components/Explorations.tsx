@@ -20,38 +20,40 @@ export default function Explorations() {
   useEffect(() => {
     if (!sectionRef.current || !contentRef.current) return;
 
-    // Pin the text center
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top top",
-      end: "bottom bottom",
-      pin: contentRef.current,
-      pinSpacing: false,
-    });
+    let ctx = gsap.context(() => {
+      // Pin the text center
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        pin: contentRef.current,
+        pinSpacing: false,
+      });
 
-    // Parallax effect on columns
-    const columns = gsap.utils.toArray<HTMLElement>(".parallax-col");
-    columns.forEach((col, index) => {
-      const isLeft = index % 2 === 0;
-      gsap.to(col, {
-        yPercent: isLeft ? -30 : 30, // move opposite directions
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
+      // Parallax effect on columns
+      const columns = gsap.utils.toArray<HTMLElement>(".parallax-col");
+      columns.forEach((col, index) => {
+        const isLeft = index % 2 === 0;
+        gsap.to(col, {
+          yPercent: isLeft ? -30 : 30, // move opposite directions
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
       });
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      ctx.revert();
     };
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-[200vh] overflow-hidden flex py-32">
+    <section ref={sectionRef} className="relative min-h-[200vh] flex py-32">
       {/* Layer 1: Pinned Center */}
       <div 
         ref={contentRef} 
