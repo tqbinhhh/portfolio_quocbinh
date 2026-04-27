@@ -17,6 +17,12 @@
   body {
     @apply bg-bg text-text-primary font-body antialiased selection:bg-text-primary selection:text-bg overflow-x-hidden;
   }
+
+  @media (min-width: 768px) {
+    html {
+      zoom: 0.8;
+    }
+  }
 }
 
 @layer utilities {
