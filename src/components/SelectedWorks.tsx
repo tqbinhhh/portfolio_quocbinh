@@ -82,7 +82,7 @@ export default function SelectedWorks() {
                 href={project.link}
                 target="_blank"
                 rel="noreferrer"
-                className={`group relative overflow-hidden bg-surface border border-stroke rounded-3xl aspect-video md:aspect-auto ${spanClass} min-h-[250px] md:min-h-[400px] block flex items-center justify-center`}
+                className={`group relative overflow-hidden bg-surface border border-stroke rounded-3xl aspect-video md:aspect-auto ${spanClass} min-h-[250px] md:min-h-[400px] flex w-full items-center justify-center`}
               >
                 {/* Background Image */}
                 <div className="absolute inset-0 flex items-center justify-center p-2 md:p-0">

@@ -14,8 +14,13 @@
     --accent: 0 0% 96%;
   }
 
+  html, body {
+    @apply overflow-x-hidden;
+    max-width: 100vw;
+  }
+
   body {
-    @apply bg-bg text-text-primary font-body antialiased selection:bg-text-primary selection:text-bg overflow-x-hidden;
+    @apply bg-bg text-text-primary font-body antialiased selection:bg-text-primary selection:text-bg;
   }
 
   @media (min-width: 768px) {
