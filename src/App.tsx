@@ -10,6 +10,7 @@ import SelectedWorks from "./components/SelectedWorks";
 import Journal from "./components/Journal";
 import Explorations from "./components/Explorations";
 import Awards from "./components/Awards";
+import PersonalMoments from "./components/PersonalMoments";
 import Stats from "./components/Stats";
 import ContactFooter from "./components/ContactFooter";
 
@@ -57,6 +58,7 @@ function App() {
               <Journal />
               <Explorations />
               <Awards />
+              <PersonalMoments />
               <Stats />
               <ContactFooter />
             </div>

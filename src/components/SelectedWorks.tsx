@@ -26,6 +26,12 @@ const projects = [
     image: "/vinho.png",
     link: "https://vi-nho-finance.netlify.app/pages/homepage.html",
   },
+  {
+    title: "AI-Bridge",
+    description: "Phiên dịch thủ ngữ thời gian thực sang giọng nói bằng Camera, MediaPipe và AI. Dự án Computer Vision mang đậm tính nhân văn.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2940&auto=format&fit=crop",
+    link: "/ai-bridge.html",
+  },
 ];
 
 export default function SelectedWorks() {

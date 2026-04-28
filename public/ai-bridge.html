@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Bridge | Sign Language Translator</title>
+  <link rel="stylesheet" href="./ai-bridge.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- MediaPipe -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo">
+        <span class="pulse"></span> AI-Bridge <span class="badge">Live Demo</span>
+      </div>
+      <a href="/" class="back-btn">← Back to Portfolio</a>
+    </header>
+
+    <main class="vision-container">
+      <div class="camera-wrapper">
+        <video class="input_video" style="display: none;" playsinline></video>
+        <canvas class="output_canvas" width="1280" height="720"></canvas>
+        
+        <div class="status-overlay" id="status-text">
+          Initializing Camera & AI Model...
+        </div>
+
+        <div class="scanning-line"></div>
+      </div>
+
+      <div class="translation-panel">
+        <div class="panel-header">
+          <h3>Real-time Translation</h3>
+          <button id="toggle-voice" class="voice-btn active">🔊 Voice On</button>
+        </div>
+        
+        <div class="subtitle-box">
+          <p id="current-gesture" class="waiting">Waiting for hand gestures...</p>
+        </div>
+
+        <div class="instructions">
+          <h4>Supported Gestures:</h4>
+          <ul>
+            <li>✋ <strong>Open Palm</strong> = "Xin chào"</li>
+            <li>✌️ <strong>Peace Sign</strong> = "Hòa bình"</li>
+            <li>🤟 <strong>I Love You</strong> = "Tôi yêu bạn"</li>
+            <li>✊ <strong>Closed Fist</strong> = "Dừng lại"</li>
+            <li>👍 <strong>Thumbs Up</strong> = "Tuyệt vời"</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./ai-bridge.js"></script>
+</body>
+</html>
