@@ -3,32 +3,32 @@ import { motion } from "framer-motion";
 const moments = [
   {
     title: "MC Sự kiện Blooming",
-    image: "/MC Blooming.JPG",
+    image: "/mc-blooming.jpg",
     colSpan: "md:col-span-1",
   },
   {
     title: "MC Sự kiện Prom",
-    image: "/MC PROM.JPG",
+    image: "/mc-prom.jpg",
     colSpan: "md:col-span-1",
   },
   {
     title: "Open STEM Day 2024",
-    image: "/OPEN STEM DAY 2024.JPG",
+    image: "/open-stem-day-2024.jpg",
     colSpan: "md:col-span-1",
   },
   {
     title: "Giải Khuyến Khích UI-8",
-    image: "/Trao Giải Khuyến Khích UI-8.jpg",
+    image: "/trao-giai-khuyen-khich-ui-8.jpg",
     colSpan: "md:col-span-2",
   },
   {
     title: "Trao giải STEM 2024",
-    image: "/Trao giải STEM 2024.jpg",
+    image: "/trao-giai-stem-2024.jpg",
     colSpan: "md:col-span-1",
   },
   {
     title: "Miss & Mister",
-    image: "/MISS & MISSTER.JPEG",
+    image: "/miss-mister.jpeg",
     colSpan: "md:col-span-3",
   },
 ];
