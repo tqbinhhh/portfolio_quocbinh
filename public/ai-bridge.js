@@ -10,6 +10,9 @@ let currentGesture = "";
 let gestureFrames = 0;
 const GESTURE_THRESHOLD = 15; // Number of consecutive frames needed to confirm a gesture
 
+let sentence = [];
+let lastAddedGesture = "";
+
 // Speech Synthesis Setup
 const synth = window.speechSynthesis;
 let vietnameseVoice = null;
@@ -29,14 +32,31 @@ voiceBtn.addEventListener('click', () => {
   if (voiceEnabled) {
     voiceBtn.classList.add('active');
     voiceBtn.innerText = "🔊 Voice On";
+    if (synth.resume) synth.resume();
   } else {
     voiceBtn.classList.remove('active');
     voiceBtn.innerText = "🔇 Voice Off";
+    synth.cancel();
   }
 });
 
+// Unlock speech synthesis on first interaction for iOS/Mobile
+let speechUnlocked = false;
+document.body.addEventListener('click', () => {
+  if (!speechUnlocked) {
+    if (synth.resume) synth.resume();
+    const unlockUtterance = new SpeechSynthesisUtterance('');
+    synth.speak(unlockUtterance);
+    speechUnlocked = true;
+  }
+}, { once: true });
+
 function speak(text) {
-  if (!voiceEnabled || synth.speaking) return;
+  if (!voiceEnabled) return;
+  
+  // Cancel any ongoing speech to prevent getting stuck (especially on iOS)
+  synth.cancel();
+  
   const utterThis = new SpeechSynthesisUtterance(text);
   if (vietnameseVoice) {
     utterThis.voice = vietnameseVoice;
@@ -62,39 +82,79 @@ function detectGesture(landmarks) {
   const isRingOpen = landmarks[16].y < landmarks[14].y;
   const isPinkyOpen = landmarks[20].y < landmarks[18].y;
 
-  // Open Palm: All fingers open
-  if (isThumbOpen && isIndexOpen && isMiddleOpen && isRingOpen && isPinkyOpen) {
-    return "Xin chào";
-  }
-  
   // Closed Fist: All fingers closed
   if (!isThumbOpen && !isIndexOpen && !isMiddleOpen && !isRingOpen && !isPinkyOpen) {
-    return "Dừng lại";
-  }
-
-  // Peace Sign: Index and Middle open, others closed
-  if (!isThumbOpen && isIndexOpen && isMiddleOpen && !isRingOpen && !isPinkyOpen) {
-    return "Hòa bình";
-  }
-
-  // I Love You: Thumb, Index, Pinky open, Middle & Ring closed
-  if (isThumbOpen && isIndexOpen && !isMiddleOpen && !isRingOpen && isPinkyOpen) {
-    return "Tôi yêu bạn";
+    return "[Xóa câu]";
   }
 
   // Thumbs Up: Thumb pointing UP (y smaller than base), others closed
   if (landmarks[4].y < landmarks[3].y && !isIndexOpen && !isMiddleOpen && !isRingOpen && !isPinkyOpen) {
-    return "Tuyệt vời";
+    return "[Đọc câu]";
+  }
+
+  // Open Palm: All fingers open
+  if (isThumbOpen && isIndexOpen && isMiddleOpen && isRingOpen && isPinkyOpen) {
+    return "Xin chào";
+  }
+
+  // Peace Sign: Index and Middle open, others closed
+  if (!isThumbOpen && isIndexOpen && isMiddleOpen && !isRingOpen && !isPinkyOpen) {
+    return "mọi người";
+  }
+
+  // Index Up: Index open, others closed
+  if (!isThumbOpen && isIndexOpen && !isMiddleOpen && !isRingOpen && !isPinkyOpen) {
+    return "tôi";
+  }
+
+  // Rock Sign: Index and Pinky open, others closed
+  if (!isThumbOpen && isIndexOpen && !isMiddleOpen && !isRingOpen && isPinkyOpen) {
+    return "rất vui";
+  }
+
+  // I Love You: Thumb, Index, Pinky open, Middle & Ring closed
+  if (isThumbOpen && isIndexOpen && !isMiddleOpen && !isRingOpen && isPinkyOpen) {
+    return "được gặp";
+  }
+
+  // Pinky Up: Pinky open, others closed
+  if (!isThumbOpen && !isIndexOpen && !isMiddleOpen && !isRingOpen && isPinkyOpen) {
+    return "bạn";
+  }
+
+  // Four Fingers (all except thumb)
+  if (!isThumbOpen && isIndexOpen && isMiddleOpen && isRingOpen && isPinkyOpen) {
+    return "cảm ơn!";
   }
 
   return "Unknown";
 }
 
 function updateUI(text) {
-  if (currentGestureText.innerText !== text) {
-    currentGestureText.innerText = text;
+  if (text === "[Xóa câu]") {
+    sentence = [];
+    currentGestureText.innerText = "Đã xóa câu...";
+    currentGestureText.classList.add('waiting');
+    lastAddedGesture = text;
+    return;
+  }
+  
+  if (text === "[Đọc câu]") {
+    if (sentence.length > 0 && lastAddedGesture !== text) {
+      const fullSentence = sentence.join(" ");
+      speak(fullSentence);
+      currentGestureText.innerText = fullSentence + " 🔊";
+      lastAddedGesture = text;
+    }
+    return;
+  }
+
+  if (text !== "Unknown" && text !== lastAddedGesture) {
+    sentence.push(text);
+    lastAddedGesture = text;
+    
+    currentGestureText.innerText = sentence.join(" ");
     currentGestureText.classList.remove('waiting');
-    speak(text);
   }
 }
 
@@ -139,6 +199,7 @@ function onResults(results) {
     // No hands detected
     currentGesture = "";
     gestureFrames = 0;
+    lastAddedGesture = ""; // Reset to allow repeating the same word after dropping hand
   }
   canvasCtx.restore();
 }
