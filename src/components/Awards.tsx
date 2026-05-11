@@ -69,6 +69,11 @@ const groupedAwards = [
         description: "Cuộc thi Sáng tạo",
         icon: <Lightbulb className="w-8 h-8 text-text-primary" />,
       },
+      {
+        title: "Giải Khuyến khích - GREEN STEM INNOVATION",
+        description: "UNICEF và VNUK",
+        icon: <Trophy className="w-8 h-8 text-text-primary" />,
+      },
     ]
   }
 ];

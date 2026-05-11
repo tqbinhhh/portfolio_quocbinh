@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import LoadingScreen from "./components/LoadingScreen";
-import FlowLine from "./components/FlowLine";
+
 import StarsBackground from "./components/StarsBackground";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -43,7 +43,7 @@ function App() {
 
   return (
     <>
-      <FlowLine />
+
       {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
       
       {!isLoading && (
