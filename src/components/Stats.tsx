@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 export default function Stats() {
   const stats = [
-    { label: "Tuổi", value: "17" },
-    { label: "Giải Thưởng", value: "11+" },
+    { label: "Tuổi", value: "18" },
+    { label: "Giải Thưởng", value: "12+" },
     { label: "Dự Án Đã Làm", value: "10+" },
   ];
 
