@@ -80,7 +80,7 @@ const groupedAwards = [
 
 export default function Awards() {
   return (
-    <section id="awards" className="relative py-16 md:py-24 border-t border-stroke overflow-hidden z-10">
+    <section id="achievement" className="relative py-16 md:py-24 border-t border-stroke overflow-hidden z-10">
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
