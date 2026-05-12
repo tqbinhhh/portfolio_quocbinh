@@ -100,7 +100,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-bg to-transparent z-0" />
 
       {/* Content */}
-      <div ref={containerRef} className="relative z-10 flex flex-col items-center text-center px-6">
+      <div ref={containerRef} className="relative z-10 flex flex-col items-center text-center px-6 pt-20 md:pt-0">
         <div ref={eyebrowRef} className="text-xs text-muted uppercase tracking-[0.3em] mb-8">
           PORTFOLIO '25
         </div>
