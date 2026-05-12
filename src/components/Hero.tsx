@@ -121,7 +121,7 @@ export default function Hero() {
         </div>
 
         <p className="text-sm md:text-base text-muted max-w-md mb-12 opacity-80 hero-button">
-         Xin Chào, mình là Quốc Bình! Hiện là học sinh cấp 3 với niềm đam mê dành cho Kỹ thuật phần mềm. Với kinh nghiệm đã được đúc kết trong những khoá học. Được thực chiến trong lĩnh vực Frontend và Design Website, mình luôn tìm kiếm cơ hội để biến những ý tưởng sáng tạo thành các sản phẩm số mượt mà và hiệu quả. Hiện tại, mình đang nỗ lực mở rộng kiến thức sang mảng Backend để trở thành một lập trình viên toàn diện.
+          Xin Chào, mình là Quốc Bình! Hiện là học sinh cấp 3 với niềm đam mê dành cho Kỹ thuật phần mềm và trí tuệ nhân tạo. Với kinh nghiệm đã được đúc kết trong những khoá học. Được thực chiến trong lĩnh vực Frontend, Backend và Design Website, mình luôn tìm kiếm cơ hội để biến những ý tưởng sáng tạo thành các sản phẩm số mượt mà và hiệu quả.
         </p>
 
         <div className="inline-flex flex-col sm:flex-row gap-4 mb-16 hero-button">
