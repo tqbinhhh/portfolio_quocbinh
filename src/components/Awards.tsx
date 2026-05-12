@@ -29,6 +29,11 @@ const groupedAwards = [
         description: "Cuộc thi Robotics",
         icon: <Trophy className="w-8 h-8 text-text-primary" />,
       },
+      {
+        title: "Giải Triển Vọng - Open Stem Day",
+        description: "FPT Đà Nẵng",
+        icon: <Sparkles className="w-8 h-8 text-text-primary" />,
+      },
     ]
   },
   {
