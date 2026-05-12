@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Stats() {
   const stats = [
     { label: "Tuổi", value: "18" },
-    { label: "Giải Thưởng", value: "12+" },
+    { label: "Giải Thưởng", value: "13+" },
     { label: "Dự Án Đã Làm", value: "10+" },
   ];
 
