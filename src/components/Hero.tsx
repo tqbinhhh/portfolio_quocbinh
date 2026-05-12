@@ -3,7 +3,7 @@ import Hls from "hls.js";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 
-const roles = ["Frontend Developer", "Web Designer", "Tech Enthusiast", "Student"];
+const roles = ["Frontend Developer", "Fullstack Developer", "Web Designer", "Tech Enthusiast", "Student"];
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
