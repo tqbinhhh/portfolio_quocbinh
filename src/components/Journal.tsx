@@ -5,14 +5,12 @@ const entries = [
     title: "Bắt đầu học lập trình",
     company: "Funix Việt Nam và 28 Tech",
     date: "09/2022 - 01/2025",
-    readTime: "2 mins",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop",
   },
   {
     title: "Frontend Developer",
     company: "CodeGym Việt Nam",
     date: "02/2025 - Present",
-    readTime: "Current",
     image: "/codegym.png",
   },
 ];
@@ -62,8 +60,6 @@ export default function Journal() {
               </div>
               <div className="flex items-center gap-4 text-sm text-muted px-2 sm:px-6 w-full sm:w-auto justify-between sm:justify-end">
                 <span>{entry.date}</span>
-                <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-stroke" />
-                <span>{entry.readTime}</span>
               </div>
             </motion.div>
           ))}
