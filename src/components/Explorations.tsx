@@ -8,9 +8,17 @@ const images = [
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
 ];
 
 export default function Explorations() {
@@ -77,7 +85,7 @@ export default function Explorations() {
         
         {/* Left Column */}
         <div className="parallax-col flex flex-col gap-12 md:gap-32 items-end pt-32">
-          {images.slice(0, 3).map((src, i) => (
+          {images.slice(0, 7).map((src, i) => (
              <div key={i} className="bg-surface border border-stroke rounded-[40px] p-12 aspect-square max-w-[280px] hover:scale-105 transition-transform duration-500 cursor-pointer flex items-center justify-center">
                <img src={src} className="w-32 h-32 object-contain filter grayscale hover:grayscale-0 transition-all duration-300" alt="Skill" />
              </div>
@@ -86,7 +94,7 @@ export default function Explorations() {
 
         {/* Right Column */}
         <div className="parallax-col flex flex-col gap-12 md:gap-32 items-start pb-32">
-          {images.slice(3, 6).map((src, i) => (
+          {images.slice(7).map((src, i) => (
              <div key={i} className="bg-surface border border-stroke rounded-[40px] p-12 aspect-square max-w-[280px] hover:scale-105 transition-transform duration-500 cursor-pointer flex items-center justify-center">
                <img src={src} className="w-32 h-32 object-contain filter grayscale hover:grayscale-0 transition-all duration-300" alt="Skill" />
              </div>
