@@ -13,7 +13,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = ["Home", "Work", "Achievement"];
+  const navLinks = ["Home", "Work", "Awards"];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 md:pt-6 px-4 pointer-events-none">
