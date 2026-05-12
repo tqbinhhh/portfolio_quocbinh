@@ -61,7 +61,7 @@ export default function Explorations() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-[200vh] flex py-32">
+    <section ref={sectionRef} className="relative min-h-[300vh] flex py-32 overflow-hidden">
       {/* Layer 1: Pinned Center */}
       <div 
         ref={contentRef} 
@@ -84,7 +84,7 @@ export default function Explorations() {
       <div className="w-full max-w-[1400px] mx-auto px-6 grid grid-cols-2 gap-12 md:gap-40 z-20 relative pointer-events-auto mt-[50vh]">
         
         {/* Left Column */}
-        <div className="parallax-col flex flex-col gap-12 md:gap-32 items-end pt-32">
+        <div className="parallax-col flex flex-col gap-8 md:gap-16 items-end pt-32">
           {images.slice(0, 7).map((src, i) => (
              <div key={i} className="bg-surface border border-stroke rounded-[40px] p-12 aspect-square max-w-[280px] hover:scale-105 transition-transform duration-500 cursor-pointer flex items-center justify-center">
                <img src={src} className="w-32 h-32 object-contain filter grayscale hover:grayscale-0 transition-all duration-300" alt="Skill" />
@@ -93,7 +93,7 @@ export default function Explorations() {
         </div>
 
         {/* Right Column */}
-        <div className="parallax-col flex flex-col gap-12 md:gap-32 items-start pb-32">
+        <div className="parallax-col flex flex-col gap-8 md:gap-16 items-start pb-32">
           {images.slice(7).map((src, i) => (
              <div key={i} className="bg-surface border border-stroke rounded-[40px] p-12 aspect-square max-w-[280px] hover:scale-105 transition-transform duration-500 cursor-pointer flex items-center justify-center">
                <img src={src} className="w-32 h-32 object-contain filter grayscale hover:grayscale-0 transition-all duration-300" alt="Skill" />
