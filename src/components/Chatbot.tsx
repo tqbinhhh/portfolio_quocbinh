@@ -587,15 +587,15 @@ export default function Chatbot() {
       <div className="fixed bottom-6 right-6 z-50">
         <motion.button
           onClick={toggleChat}
-          whileHover={{ scale: 1.08 }}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="relative flex items-center justify-center w-14 h-14 rounded-full bg-surface border border-stroke text-text-primary shadow-2xl overflow-hidden focus:outline-none group cursor-pointer"
+          className="relative flex items-center justify-center w-14 h-14 rounded-full accent-gradient text-[#fff] shadow-[0_0_20px_rgba(78,133,191,0.4)] hover:shadow-[0_0_30px_rgba(78,133,191,0.6)] focus:outline-none group cursor-pointer transition-shadow duration-300"
         >
           {/* Subtle Glow Ring */}
-          <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+          <span className="absolute inset-0 rounded-full animate-ping bg-[#89AACC] opacity-20 pointer-events-none" />
 
           {/* Core Button Face */}
-          <div className="relative w-full h-full rounded-full bg-surface/90 flex items-center justify-center z-10 transition-colors duration-300">
+          <div className="relative w-full h-full rounded-full flex items-center justify-center z-10">
             <AnimatePresence mode="wait">
               {isOpen ? (
                 <motion.div
@@ -605,7 +605,7 @@ export default function Chatbot() {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X className="w-5 h-5 text-text-primary" />
+                  <X className="w-6 h-6 text-[#fff]" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -616,12 +616,12 @@ export default function Chatbot() {
                   transition={{ duration: 0.2 }}
                   className="relative"
                 >
-                  <MessageSquare className="w-5 h-5 text-text-primary" />
+                  <MessageSquare className="w-6 h-6 text-[#fff]" />
                   {/* Glowing dot for user attention */}
                   {!isOpen && (
-                    <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#89AACC] opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#4E85BF]"></span>
+                    <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#fff] opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-3 w-3 bg-[#fff]"></span>
                     </span>
                   )}
                 </motion.div>
