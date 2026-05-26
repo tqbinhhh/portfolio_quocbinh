@@ -4,7 +4,6 @@ import {
   MessageSquare,
   X,
   Send,
-  Settings,
   Key,
   Sparkles,
   Bot,
