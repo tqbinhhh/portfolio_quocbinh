@@ -385,7 +385,7 @@ export default function Chatbot() {
 
         // Request Gemini API
         const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${activeKey}`,
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${activeKey}`,
           {
             method: "POST",
             headers: {
@@ -446,7 +446,7 @@ export default function Chatbot() {
         {
           id: `bot-err-${Date.now()}`,
           sender: "bot",
-          text: `❌ *Đã xảy ra lỗi khi kết nối với máy chủ AI.*\n\nHệ thống tự động chuyển sang chế độ dự phòng:\n\n${getSimulatedResponse(userText)}`,
+          text: `❌ *Đã xảy ra lỗi khi kết nối với máy chủ AI.* Xin vui lòng thử lại sau.`,
           timestamp: new Date()
         }
       ]);
