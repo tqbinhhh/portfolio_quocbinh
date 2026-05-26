@@ -695,12 +695,9 @@ export default function Chatbot() {
               </div>
             </div>
 
-            {/* Chat Content Body */}
-            <div className="flex-1 overflow-y-auto px-6 py-4 flex flex-col gap-4 relative">
-              
-              {/* Settings Window Overlay */}
-              <AnimatePresence>
-                {showSettings && (
+            {/* Overlays - placed outside scroll body so they always cover full chat window */}
+            <AnimatePresence>
+              {showSettings && (
                   <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -787,12 +784,11 @@ export default function Chatbot() {
                       </div>
                     </form>
                   </motion.div>
-                )}
-              </AnimatePresence>
+              )}
+            </AnimatePresence>
 
-              {/* Contact Form Overlay */}
-              <AnimatePresence>
-                {showContactForm && (
+            <AnimatePresence>
+              {showContactForm && (
                   <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -877,8 +873,11 @@ export default function Chatbot() {
                       </div>
                     </form>
                   </motion.div>
-                )}
-              </AnimatePresence>
+              )}
+            </AnimatePresence>
+
+            {/* Chat Content Body */}
+            <div className="flex-1 overflow-y-auto px-6 py-4 flex flex-col gap-4">
 
               {/* Message Feed */}
               {messages.map((msg) => (
@@ -935,6 +934,7 @@ export default function Chatbot() {
               {/* Scroll anchor */}
               <div ref={chatEndRef} />
             </div>
+            {/* End Chat Content Body */}
 
             {/* Predefined prompt suggestions */}
             {!showSettings && messages.length <= 2 && (
