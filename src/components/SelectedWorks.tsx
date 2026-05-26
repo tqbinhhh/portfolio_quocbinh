@@ -61,7 +61,7 @@ export default function SelectedWorks() {
             </p>
           </div>
 
-          <a href="#" className="hidden md:inline-flex items-center gap-2 relative group cursor-pointer text-sm rounded-full bg-surface px-6 py-3 border border-stroke hover:border-transparent transition-colors">
+          <a href="https://github.com/tqbinhhh?tab=repositories" target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 relative group cursor-pointer text-sm rounded-full bg-surface px-6 py-3 border border-stroke hover:border-transparent transition-colors">
             <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="relative z-10 flex items-center gap-2 text-text-primary">
               View all work

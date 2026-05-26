@@ -13,7 +13,6 @@ import Awards from "./components/Awards";
 import PersonalMoments from "./components/PersonalMoments";
 import Stats from "./components/Stats";
 import ContactFooter from "./components/ContactFooter";
-import CustomCursor from "./components/CustomCursor";
 import Chatbot from "./components/Chatbot";
 
 function App() {
@@ -50,7 +49,6 @@ function App() {
       
       {!isLoading && (
         <div className="text-text-primary overflow-hidden selection:bg-text-primary selection:text-bg">
-          <CustomCursor />
           <StarsBackground />
           <Navbar />
           <Hero />
