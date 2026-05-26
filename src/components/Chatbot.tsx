@@ -385,7 +385,7 @@ export default function Chatbot() {
 
         // Request Gemini API
         const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${activeKey}`,
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${activeKey}`,
           {
             method: "POST",
             headers: {
@@ -661,7 +661,7 @@ export default function Chatbot() {
                   <h3 className="text-sm font-medium text-text-primary flex items-center gap-1.5">
                     Quốc Bình AI
                     <span className="text-[10px] uppercase px-1.5 py-0.5 rounded bg-stroke text-muted font-normal">
-                      {apiKey.trim() || import.meta.env.VITE_GEMINI_API_KEY ? "Gemini 2.5" : "Local AI"}
+                      {apiKey.trim() || import.meta.env.VITE_GEMINI_API_KEY ? "Gemini 2.0" : "Local AI"}
                     </span>
                   </h3>
                   <p className="text-[11px] text-muted font-light">Online & Ready to chat</p>
