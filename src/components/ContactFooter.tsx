@@ -267,6 +267,32 @@ export default function ContactFooter() {
                   </motion.div>
                 )}
               </AnimatePresence>
+
+              {/* Empty State Content when form is closed */}
+              <AnimatePresence>
+                {!isFormOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    className="overflow-hidden"
+                  >
+                    <div className="mt-4 flex flex-col gap-5 pl-2">
+                      <div className="flex items-center gap-3 text-sm text-emerald-400 font-medium bg-emerald-400/10 w-fit px-4 py-2 rounded-full border border-emerald-400/20">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        Sẵn sàng đón nhận các dự án mới
+                      </div>
+                      <p className="text-muted leading-relaxed text-[15px] max-w-md italic">
+                        "Tôi luôn tin rằng công nghệ có sức mạnh để thay đổi cuộc sống. Hãy cùng nhau biến những ý tưởng sáng tạo thành các sản phẩm kỹ thuật số mượt mà và mang lại giá trị thực tiễn."
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
 
             {/* Direct Contact Options */}
