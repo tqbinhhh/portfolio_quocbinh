@@ -320,7 +320,7 @@ export default function Chatbot() {
           {
             id: `bot-contact-success-${Date.now()}`,
             sender: "bot",
-            text: `📬 Mình đã **tạo mẫu Email tự động** và mở ứng dụng thư của bạn để gửi tới Quốc Bình (\`tqbdinamo@gmail.com\`).\n\n*Mẹo nhỏ: Bạn có thể vào Cài đặt (biểu tượng Bánh răng ⚙️) và cấu hình **Web3Forms Access Key miễn phí** để chatbot có thể tự động gửi thư chạy ngầm mà không cần mở ứng dụng email của bạn nhé!*`,
+            text: `📬 Mình đã **tạo mẫu Email tự động** và mở ứng dụng thư của bạn để gửi tới Quốc Bình (\`tqbdinamo@gmail.com\`).\n\n*Hệ thống hiện tại đang sử dụng ứng dụng Email mặc định của máy để gửi thư.*`,
             timestamp: new Date()
           }
         ]);
