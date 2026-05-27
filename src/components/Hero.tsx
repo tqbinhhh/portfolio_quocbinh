@@ -143,7 +143,6 @@ export default function Hero() {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
-        <span className="text-xs text-muted uppercase tracking-[0.2em] mb-4">Scroll</span>
         <div className="w-px h-10 bg-stroke relative overflow-hidden">
           <div className="w-full h-full bg-text-primary animate-scroll-down absolute top-0 left-0" />
         </div>
