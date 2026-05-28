@@ -12,8 +12,8 @@ const moments = [
     colSpan: "md:col-span-1",
   },
   {
-    title: "Open STEM Day 2024",
-    image: "/open-stem-day-2024.jpg",
+    title: "Lễ Tôn Vinh 2026",
+    image: "/le-ton-vinh-2026.jpg",
     colSpan: "md:col-span-1",
   },
   {
