@@ -24,7 +24,7 @@ const projects = [
     title: "Ví Nhỏ Finance",
     description: "Ứng dụng quản lý tài chính thông minh dành riêng cho người Việt.",
     image: "/vinho.png",
-    link: "https://vi-nho-finance.netlify.app/pages/homepage.html",
+    link: "https://vinho-iyj4khx06-tqbinh.vercel.app/src/pages/homepage.html",
   },
   {
     title: "AI-Bridge",
