@@ -40,11 +40,6 @@ const PORTFOLIO_INFO = {
       link: "https://tqbinhhh.github.io/Omi-Food/"
     },
     {
-      title: "Weather vision Pro",
-      desc: "Bảng điều khiển cập nhật nhanh chóng và chính xác tình hình thời tiết.",
-      link: "https://tqbinhhh.github.io/weatherpro.vn/pages/weather_dashboard_homepage.html"
-    },
-    {
       title: "Ví Nhỏ Finance",
       desc: "Ứng dụng quản lý tài chính thông minh dành riêng cho người Việt.",
       link: "https://vinho-delta.vercel.app/src/pages/homepage.html"
@@ -103,9 +98,8 @@ Dưới đây là lý lịch chi tiết của Trần Quốc Bình để bạn n�
 - Các dự án tiêu biểu (Selected Works):
   1. Kizo Shop: Website mua sắm thời trang hiện đại, sang trọng, đầy đủ tính năng. Link: https://kizo-shop.netlify.app/
   2. OmiFood: Trang web quảng bá dịch vụ ẩm thực hiện đại, giao diện trực quan bắt mắt. Link: https://tqbinhhh.github.io/Omi-Food/
-  3. Weather vision Pro: Bảng điều khiển dự báo thời tiết thời gian thực chính xác và trực quan sinh động. Link: https://tqbinhhh.github.io/weatherpro.vn/pages/weather_dashboard_homepage.html
-  4. Ví Nhỏ Finance: Ứng dụng quản lý tài chính cá nhân thông minh, thân thiện dành riêng cho người Việt. Link: https://vinho-delta.vercel.app/src/pages/homepage.html
-  5. AI-Bridge: Dự án ý nghĩa dịch ngôn ngữ ký hiệu thời gian thực sang giọng nói qua Camera dùng MediaPipe và AI. Link: /ai-bridge.html (ở ngay thư mục gốc portfolio).
+  3. Ví Nhỏ Finance: Ứng dụng quản lý tài chính cá nhân thông minh, thân thiện dành riêng cho người Việt. Link: https://vinho-delta.vercel.app/src/pages/homepage.html
+  4. AI-Bridge: Dự án ý nghĩa dịch ngôn ngữ ký hiệu thời gian thực sang giọng nói qua Camera dùng MediaPipe và AI. Link: /ai-bridge.html (ở ngay thư mục gốc portfolio).
 - Thông tin liên hệ (Contact):
   + GitHub: https://github.com/tqbinhhh
   + Email: tqbdinamo@gmail.com

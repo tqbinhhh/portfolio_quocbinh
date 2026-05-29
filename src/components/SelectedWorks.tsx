@@ -15,12 +15,6 @@ const projects = [
     link: "https://tqbinhhh.github.io/Omi-Food/",
   },
   {
-    title: "Weather vision Pro",
-    description: "Cập nhật nhanh chóng và chính xác tình hình thời tiết.",
-    image: "/weatherpro.png",
-    link: "https://tqbinhhh.github.io/weatherpro.vn/pages/weather_dashboard_homepage.html",
-  },
-  {
     title: "Ví Nhỏ Finance",
     description: "Ứng dụng quản lý tài chính thông minh dành riêng cho người Việt.",
     image: "/vinho.png",
