@@ -67,10 +67,7 @@ export default function SelectedWorks() {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
           {projects.map((project, index) => {
-            const spanClass =
-              index % 4 === 0 || index % 4 === 3
-                ? "md:col-span-7"
-                : "md:col-span-5";
+            const spanClass = "md:col-span-6";
 
             return (
               <motion.a
