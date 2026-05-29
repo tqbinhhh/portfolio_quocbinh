@@ -7,13 +7,13 @@ const moments = [
     colSpan: "md:col-span-1",
   },
   {
-    title: "MC Sự kiện Prom",
-    image: "/mc-prom.jpg",
+    title: "Lễ Tôn Vinh 2026",
+    image: "/le-ton-vinh-2026.jpg",
     colSpan: "md:col-span-1",
   },
   {
-    title: "Lễ Tôn Vinh 2026",
-    image: "/le-ton-vinh-2026.jpg",
+    title: "MC Sự kiện Prom",
+    image: "/mc-prom.jpg",
     colSpan: "md:col-span-1",
   },
   {
