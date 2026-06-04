@@ -16,7 +16,7 @@ export default {
       },
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
+        display: ['Instrument Serif', 'serif'],
       },
       keyframes: {
         "scroll-down": {
