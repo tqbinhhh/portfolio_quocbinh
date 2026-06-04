@@ -3,7 +3,7 @@ import Hls from "hls.js";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 
-const roles = ["Frontend Developer", "Fullstack Developer", "Web Designer", "Tech Enthusiast", "Student"];
+const roles = ["Frontend Developer", "Fullstack Developer", "Web Designer", "Tech Enthusiast"];
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -121,7 +121,7 @@ export default function Hero() {
         </div>
 
         <p className="text-sm md:text-base text-muted max-w-md mb-12 opacity-80 hero-button">
-          Xin Chào, mình là Quốc Bình! Hiện là học sinh cấp 3 với niềm đam mê dành cho Kỹ thuật phần mềm và trí tuệ nhân tạo. Với kinh nghiệm đã được đúc kết trong những khoá học. Được thực chiến trong lĩnh vực Frontend, Backend và Design Website, mình luôn tìm kiếm cơ hội để biến những ý tưởng sáng tạo thành các sản phẩm số mượt mà và hiệu quả.
+          Xin chào, mình là Quốc Bình! Là một người trẻ có niềm đam mê lớn với Kỹ thuật phần mềm và Trí tuệ nhân tạo (AI). Từ nền tảng kiến thức bài bản cùng kinh nghiệm thực chiến trong cả Frontend, Backend và UI/UX Design, mình luôn hướng tới việc biến những ý tưởng sáng tạo thành các sản phẩm số mượt mà, tối ưu và mang lại giá trị thực tế.
         </p>
 
         <div className="inline-flex flex-col sm:flex-row gap-4 mb-16 hero-button">

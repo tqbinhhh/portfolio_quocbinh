@@ -26,8 +26,8 @@ const PORTFOLIO_INFO = {
   name: "Trần Quốc Bình",
   age: "18 tuổi (sinh năm 2008)",
   location: "Đà Nẵng, Việt Nam",
-  roles: ["Frontend Developer", "Fullstack Developer", "Web Designer", "Tech Enthusiast", "Student"],
-  about: "Là học sinh cấp 3 đam mê Kỹ thuật phần mềm và Trí tuệ nhân tạo. Có kinh nghiệm thực chiến về Frontend, Backend và thiết kế UI/UX, luôn mong muốn biến ý tưởng sáng tạo thành sản phẩm số mượt mà.",
+  roles: ["Frontend Developer", "Fullstack Developer", "Web Designer", "Tech Enthusiast"],
+  about: "Là lập trình viên trẻ đam mê Kỹ thuật phần mềm và Trí tuệ nhân tạo. Có kinh nghiệm thực chiến về Frontend, Backend và thiết kế UI/UX, luôn mong muốn biến ý tưởng sáng tạo thành sản phẩm số mượt mà.",
   projects: [
     {
       title: "Kizo Shop",
@@ -82,8 +82,8 @@ Bạn là Trợ lý AI (AI Portfolio Assistant) cực kỳ thông minh, thân th
 
 Dưới đây là lý lịch chi tiết của Trần Quốc Bình để bạn nắm rõ:
 - Họ và tên: Trần Quốc Bình (thường gọi là Quốc Bình hoặc Bình)
-- Độ tuổi: 18 tuổi (Sinh năm 2008), hiện tại đang là học sinh cấp 3 tại Đà Nẵng.
-- Định hướng nghề nghiệp: Kỹ sư phần mềm (Software Engineer) & Trí tuệ nhân tạo (AI Developer).
+- Độ tuổi: 18 tuổi (Sinh năm 2008), hiện đang sinh sống và làm việc tại Đà Nẵng.
+- Định hướng nghề nghiệp: Lập trình viên (Software Engineer) & Trí tuệ nhân tạo (AI Developer).
 - Vai trò: Frontend Developer, Fullstack Developer, Web Designer, Tech Enthusiast.
 - Tính cách công việc: Sáng tạo, kiên trì, đam mê ứng dụng công nghệ để giải quyết các vấn đề thực tiễn (đặc biệt là các dự án mang tính nhân văn như AI-Bridge hỗ trợ người câm điếc).
 - Kỹ năng công nghệ chính:
@@ -156,7 +156,7 @@ const getSimulatedResponse = (input: string): string => {
   }
 
   if (query.match(/(bản thân|ai|giới thiệu|profile|thông tin|quốc bình)/)) {
-    return `**Trần Quốc Bình** là một lập trình viên trẻ đầy nhiệt huyết (18 tuổi, hiện là học sinh cấp 3 tại TP. Đà Nẵng).\n\nCậu ấy có niềm đam mê mãnh liệt dành cho **Kỹ thuật phần mềm và Trí tuệ nhân tạo (AI)**. Bình đã tự học và thực chiến trên nhiều dự án Web cũng như Robotics, luôn mong muốn ứng dụng công nghệ để giải quyết các vấn đề xã hội thực tiễn (như dự án dịch ngôn ngữ ký hiệu **AI-Bridge**).`;
+    return `**Trần Quốc Bình** là một lập trình viên trẻ đầy nhiệt huyết (18 tuổi, hiện sinh sống tại TP. Đà Nẵng).\n\nCậu ấy có niềm đam mê mãnh liệt dành cho **Kỹ thuật phần mềm và Trí tuệ nhân tạo (AI)**. Bình đã tự học và thực chiến trên nhiều dự án Web cũng như Robotics, luôn mong muốn ứng dụng công nghệ để giải quyết các vấn đề xã hội thực tiễn (như dự án dịch ngôn ngữ ký hiệu **AI-Bridge**).`;
   }
 
   // General fallback prompting to use Gemini API key for dynamic conversations
